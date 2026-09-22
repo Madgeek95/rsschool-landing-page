@@ -38,7 +38,7 @@ html {
 }
 
 body {
-  width: clamp(460px, 100%,1440px);
+  width: clamp(460px, 100%,1460px);
   background-color: var(--page);
   padding: 20px 40px 40px 40px;
 }
@@ -179,7 +179,7 @@ span.heading-1--accent {
   position: absolute;
   left: 0;
   top: 0;
-  width: clamp(480px, 100%, 1360px);
+  width: clamp(480px, 100%, 1380px);
   height: 644px;
   z-index: 0;
   object-fit: cover;
@@ -286,4 +286,42 @@ span.heading-1--accent {
 
 .indicator.active {
   border-color: var(--inverse-bd);
+}
+
+.cozy-place .heading-2 {
+  letter-spacing: 1.35px;
+}
+
+.cozy-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(7, 1fr);
+  gap: 40px;
+  height: 1060px;
+  margin-top: 40px;
+}
+
+.grid-item{
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.item-1 {
+  grid-column: 1;
+  grid-row: 1 / span 4;
+}
+.item-2 {
+  grid-column: 2;
+  grid-row: 1 / span 3;
+}
+.item-3 {
+  grid-column: 1;
+  grid-row: 5 / span 3;
+}
+.item-4 {
+  grid-column: 2;
+  grid-row: 4 / span 4;
 }
