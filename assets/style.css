@@ -325,3 +325,75 @@ span.heading-1--accent {
   grid-column: 2;
   grid-row: 4 / span 4;
 }
+
+.app {
+  display: flex;
+  justify-content: space-between;
+}
+
+.app-info {
+  width: 630px;
+  align-self: center;
+}
+
+.app-info p {
+  margin: 40px 0;
+}
+
+.app-links {
+  display: flex;
+  gap: 20px;
+}
+
+.app-links button {
+  display: flex;
+  gap: 8px;
+  width: 200px;
+  padding: 12px 20px;
+  border-radius: 100px;
+  border: 1px solid var(--inverse-bd);
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 40px;
+  padding: 100px;
+  background-color: var(--container);
+  margin-top: 100px;
+}
+
+.footer-socials {
+  width: 530px;
+}
+
+.footer .heading-2 {
+  color: var(--inverse);
+}
+
+.footer .heading-2--accent {
+  color: var(--accent);
+}
+
+.footer-social-links {
+  display: flex;
+  gap: 12px;
+  margin-top: 40px;
+}
+
+.footer-contacts {
+  width: 530px;
+  align-self: center;
+}
+
+.footer-contacts p{
+  margin-bottom: 40px;
+  color: var(--inverse);
+}
+
+.footer-address ul li {
+  display: flex;
+  gap: 8px;
+  color: var(--inverse);
+  margin-top: 16px;
+}
