@@ -27,6 +27,7 @@
   margin: 0;
   padding: 0;
   font-family: Inter, sans-serif;
+  color: var(--primary);
 }
 
 html {
@@ -37,7 +38,7 @@ html {
 }
 
 body {
-  width: clamp(460px, 100vw,1440px);
+  width: clamp(460px, 100%,1440px);
   background-color: var(--page);
   padding: 20px 40px 40px 40px;
 }
@@ -76,10 +77,11 @@ span.heading-1--accent {
   font-size: 60px;
   font-weight: 600;
   line-height: 125%;
+}
 
-  &--accent {
-    font-style: italic;
-  }
+.heading-2--accent {
+  font-style: italic;
+  color: var(--accent);
 }
 
 .heading-3 {
@@ -177,7 +179,7 @@ span.heading-1--accent {
   position: absolute;
   left: 0;
   top: 0;
-  width: 1360px;
+  width: clamp(480px, 100%, 1360px);
   height: 644px;
   z-index: 0;
   object-fit: cover;
@@ -188,15 +190,16 @@ span.heading-1--accent {
   position: relative;
   width: 530px;
   text-align: left;
+}
+
+.showcase__heading {
   color: var(--inverse);
 }
 
-/* .showcase__heading {
-  width: 530px;
-} */
-
 .showcase__text {
   margin: 40px 0;
+  color: var(--inverse);
+
 }
 
 .showcase__menu-btn {
@@ -204,4 +207,83 @@ span.heading-1--accent {
   padding: 20px 78px;
   background-color: var(--page);
   cursor: pointer;
+}
+
+.section {
+  margin-top: 100px;
+}
+
+.favorite-coffee .heading-2 {
+  text-align: center;
+}
+
+.favorite-coffee__slider {
+  width: 100%;
+  margin: 40px 0;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.arr-right, .arr-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border: 1px solid var(--inverse-bd);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+}
+
+.arr-right {
+  right: 0;
+}
+
+.arr-left {
+  rotate: 180deg;
+}
+
+.coffee-cards {
+  width: 300%;
+  display: flex;
+  justify-content: space-around;
+  transition: transform 0.3s ease;
+}
+
+.coffee-card {
+  width: 480px;
+  height: 640px;
+  text-align: center;
+  flex-shrink: 0; 
+  flex-grow: 0;
+}
+
+.coffee-card img {
+  display: block;
+  width: 100%;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+
+.coffee-card p {
+  margin: 16px 0;
+}
+
+
+.slide-indicator {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.indicator {
+  width: 40px;
+  border: 2px solid var(--primary-bd);
+  border-radius: 100px;
+}
+
+.indicator.active {
+  border-color: var(--inverse-bd);
 }
