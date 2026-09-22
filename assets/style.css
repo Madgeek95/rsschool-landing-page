@@ -1,12 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+  /* Text light */
+  --primary: #403F3D;
+  --inverse: #E1D4C9;
+  --accent: #B0907A;
+  /* Text dark */
+  --dark-text-primary: #E1D4C9;
+  /* Background */
+  --page: #E1D4C9;
+  --container: #665F55;
+  --overlay: #403f3dcc;
+  --dark-bg-page: #292826;
+  --dark-bg-container: #403F3D;
+  --dark-bg-overlay: #292826cc;
+  /* Border */
+  --primary-bd: #C1B6AD;
+  --inverse-bd: #665F55;
+  --dark-inverse-bd: #C1B6AD;
+  --dark-primary-bd: #665F55;
+  
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: Inter, sans-serif;
 }
 
 html {
   scroll-behavior: smooth;
   background-color: black;
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  max-width: 1440px;
+  background-color: var(--page);
+  padding: 20px 40px 40px 40px;
 }
 
 a, li {
@@ -15,3 +48,114 @@ a, li {
   list-style: none;
 }
 
+button {
+  border: none;
+  background-color: unset;
+}
+
+.heading-1 {
+  font-size: 72px;
+  font-weight: 600;
+  line-height:  105%;
+
+  &--accent {
+    font-style: italic;
+  }
+}
+
+.heading-2 {
+  font-size: 72px;
+  font-weight: 600;
+  line-height:  105%;
+}
+.heading-2 {
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 125%;
+
+  &--accent {
+    font-style: italic;
+  }
+}
+
+.heading-3 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height:  125%;
+}
+
+.font-medium {
+  font-size: 16px;
+  font-weight: 400;
+  line-height:  150%;
+}
+
+.font-caption {
+  font-size: 10px;
+  font-weight: 600;
+  line-height:  140%;
+}
+
+.link-n-button {
+  font-size: 16px;
+  font-weight: 600;
+  line-height:  150%;
+}
+
+.burger-link {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 125%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav {
+  flex-grow: 1;
+}
+
+.nav-items {
+  display: flex;
+  gap: 40px;
+  padding: 16px;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.theme-toggler {
+  align-self: center;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 3px;
+  border-radius: 100px;
+  border: 1px solid var(--primary-bd);
+}
+
+.theme-toggler button {
+  border-radius: 50%;
+  padding: 7px;
+  cursor: pointer;
+}
+
+.light {
+  background-color: var(--accent);
+}
+
+.menu a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+
+.main {
+  padding-top: 20px;
+}
